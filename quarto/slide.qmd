@@ -1,0 +1,76 @@
+---
+title: "Slide"
+date: today
+author:
+    - name: A Person
+      email: aperson@mail.com
+      url: https://www.aperson.com/
+format:
+  revealjs:
+    menu: false
+    center: false
+    slide-number: h.v
+    show-slide-number: all
+    shot-notes: true
+    multiplex: true
+    navigation-mode: vertical
+    embed-resources: true
+    theme: [default, slide.scss]
+    footer: "www.gusgw.net"
+---
+
+# Slide with speaker notes
+
+Slide content
+
+## Subsubsection
+
+Is this slide one below?
+
+::: {.notes}
+Speaker notes go here.
+:::
+
+# Incremental
+
+::: {.incremental}
+- Eat spaghetti
+- Drink wine
+:::
+
+# Columns
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+
+# Chemistry
+
+Chemical notation is available:
+
+$$
+\require{mhchem}
+\ce{H2O}
+$$
+
+::: {.notes}
+The `mhchem` package needs to be installed.
+:::
+
+# Mathematics
+
+$$
+\int\limits_{-\infty}^\infty \mathrm{d}x\, \exp\left(-\frac{1}{2}x^2\right)
+$$
+
+::: {.notes}
+Make sure KaTeX or MathJax is available.
+:::

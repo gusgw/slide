@@ -2,21 +2,30 @@
 title: "Slide"
 date: today
 author:
-    - name: A Person
-      email: aperson@mail.com
-      url: https://www.aperson.com/
+    - name: Angus Gray-Weale
+      email: gusgw@gusgw.net
 format:
   revealjs:
-    menu: false
-    center: false
+    mermaid-format: png
+    menu: true
+    center: true
+    margin: 0.025
+    width: 1200
+    height: 800
+    incremental: true
     slide-number: h.v
     show-slide-number: all
     shot-notes: true
+    smooth-scroll: true
     multiplex: true
     navigation-mode: vertical
     embed-resources: true
     theme: [default, slide.scss]
-    footer: "www.gusgw.net"
+    footer: "[www.gusgw.net](https://www.gusgw.net/)"
+  beamer:
+    aspectratio:  32
+    section-titles: false
+    slide-level: 2
 ---
 
 # Slide with speaker notes

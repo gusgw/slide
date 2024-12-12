@@ -1,4 +1,5 @@
-# slide
+# Slide template
+
 Setup creation of reveal.js slides with either Quarto or Hugo.
 
 https://quarto.org/docs/presentations/revealjs/

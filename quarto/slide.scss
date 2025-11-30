@@ -1,10 +1,31 @@
 /*-- scss:defaults --*/
 /*-- scss:rules --*/
 .reveal .footer {
-  font-size: 0.5em !important;
-  text-align: center !important;
+  font-size: 1em !important;
+  text-align: left !important;
+  left: 1em !important;
+  right: auto !important;
+  transform: none !important;
 }
 .reveal .slide-logo {
   top: 0;
   left: 12px
+}
+
+/* Move menu button to top left */
+.reveal .slide-menu-button {
+  top: 20px !important;
+  bottom: auto !important;
+  left: 20px !important;
+  right: auto !important;
+}
+
+/* Double slide number size */
+.reveal .slide-number {
+  font-size: 1em !important; /* Default is typically around 0.5em or small, ensuring it's large */
+  transform: scale(1.7);     /* Make it a little smaller */
+  transform-origin: bottom right;
+  bottom: 5px !important;    /* Restore previous bottom position */
+  letter-spacing: -0.1em;    /* Reduce spacing between characters by twice as much */
+  right: 0.6em !important;   /* Halve the distance from the right edge */
 }

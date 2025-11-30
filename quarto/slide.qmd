@@ -6,7 +6,6 @@ author:
       email: gusgw@gusgw.net
 format:
   revealjs:
-    mermaid-format: png
     menu: true
     center: true
     margin: 0.025
@@ -17,7 +16,7 @@ format:
     show-slide-number: all
     shot-notes: true
     smooth-scroll: true
-    multiplex: true
+    multiplex: false
     navigation-mode: vertical
     embed-resources: true
     theme: [default, slide.scss]
@@ -26,6 +25,19 @@ format:
     aspectratio:  32
     section-titles: false
     slide-level: 2
+    header-includes:
+      - \usepackage[version=4]{mhchem}
+      - \setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\textbullet}}
+      - \setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\textbullet}}
+      - \setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\textbullet}}
+      - |
+          \setbeamertemplate{footline}{%
+            \hspace*{1em}\href{https://www.gusgw.net/}{www.gusgw.net}%
+            \hfill%
+            \insertframenumber/\inserttotalframenumber%
+            \hspace*{1em}%
+            \vspace{4pt}%
+          }
 ---
 
 # Slide with speaker notes
@@ -65,8 +77,11 @@ Right column
 
 Chemical notation is available:
 
+::: {.content-visible when-format="revealjs"}
+$\require{mhchem}$
+:::
+
 $$
-\require{mhchem}
 \ce{H2O}
 $$
 
@@ -83,3 +98,14 @@ $$
 ::: {.notes}
 Make sure KaTeX or MathJax is available.
 :::
+
+# Mermaid Diagram
+
+```{mermaid}
+graph LR
+  A[Start] --> B{Is it working?}
+  B -- Yes --> C[Great!]
+  B -- No --> D[Fix it]
+  C --> E[End]
+  D --> E
+```

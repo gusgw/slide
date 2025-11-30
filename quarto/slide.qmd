@@ -136,3 +136,28 @@ $$
 Make sure KaTeX or MathJax is available.
 :::
 
+# Mermaid Diagram
+
+::: {.content-visible when-format="revealjs"}
+```{mermaid}
+graph LR
+  A[Start] --> B{Working}
+  B -- Yes --> C[Great]
+  B -- No --> D[Fix]
+  C --> E[End]
+  D --> E
+```
+:::
+
+::: {.content-visible when-format="pdf"}
+```{mermaid}
+%%| fig-width: 4
+graph LR
+  A[Start] --> B{Working}
+  B -- Yes --> C[Great]
+  B -- No --> D[Fix]
+  C --> E[End]
+  D --> E
+```
+:::
+

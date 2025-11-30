@@ -21,6 +21,28 @@ format:
     embed-resources: true
     theme: [default, slide.scss]
     footer: "[www.gusgw.net](https://www.gusgw.net/)"
+    header-includes: |
+      <style>
+        #title-slide {
+          text-align: left !important;
+        }
+        #title-slide .quarto-title-authors,
+        #title-slide h1.title,
+        #title-slide p.subtitle,
+        #title-slide p.date {
+          margin-left: 45% !important;
+          text-align: left !important;
+        }
+        #title-slide .quarto-title-authors {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-start !important;
+        }
+      </style>
+    title-slide-attributes:
+      data-background-image: happy_cockatoo.png
+      data-background-size: 35%
+      data-background-position: 5% center
   beamer:
     out-width: 50%
     aspectratio:  32
@@ -39,10 +61,24 @@ format:
             \hspace*{1em}%
             \vspace{4pt}%
           }
+          \setbeamertemplate{title page}{%
+            \begin{columns}
+              \begin{column}{0.4\textwidth}
+                \includegraphics[width=\linewidth]{happy_cockatoo.png}
+              \end{column}
+              \begin{column}{0.6\textwidth}
+                \flushleft
+                {\usebeamerfont{title}\huge\inserttitle\par}
+                \vspace{1em}
+                {\usebeamerfont{author}\insertauthor\par}
+                \vspace{0.5em}
+                {\usebeamerfont{date}\insertdate\par}
+              \end{column}
+            \end{columns}
+          }
 ---
 
 # Slide with speaker notes
-
 Slide content
 
 ## Subsubsection
@@ -98,30 +134,5 @@ $$
 
 ::: {.notes}
 Make sure KaTeX or MathJax is available.
-:::
-
-# Mermaid Diagram
-
-::: {.content-visible when-format="revealjs"}
-```{mermaid}
-graph LR
-  A[Start] --> B{Working}
-  B -- Yes --> C[Great]
-  B -- No --> D[Fix]
-  C --> E[End]
-  D --> E
-```
-:::
-
-::: {.content-visible when-format="pdf"}
-```{mermaid}
-%%| fig-width: 4
-graph LR
-  A[Start] --> B{Working}
-  B -- Yes --> C[Great]
-  B -- No --> D[Fix]
-  C --> E[End]
-  D --> E
-```
 :::
 
